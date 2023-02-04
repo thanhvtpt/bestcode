@@ -29,7 +29,17 @@
   display: flex;
   flex-direction: column;
 }
- 
+button#playBtn {
+    position: relative;
+    top: 261px;
+    left: 30%;
+    z-index: 99999999;
+    border: unset;
+    width: 160px;
+    color: #fff;
+    background: rgb(225, 12, 168);
+    padding: 6px 20px;
+}
 canvas {
   position: absolute;
   width: 100%;
@@ -91,6 +101,20 @@ canvas {
     <audio autoplay>
       <source src="bestnhac.mp3">
     </audio>
+
+    <audio id="myAudio">
+      <source src="bestnhac.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <button id="playBtn">Nhạc gủi bé</button>
+    <script>
+      var playBtn = document.getElementById("playBtn");
+  var audio = document.getElementById("myAudio");
+
+  playBtn.addEventListener("click", function() {
+    audio.play();
+  });
+    </script>
 
 
    <div class="box">
