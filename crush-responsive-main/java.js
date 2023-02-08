@@ -28,9 +28,14 @@ function animateNumber(finalNumber, delay, startNumber = 0, callback) {
 // ---------------hết phần hiệu ứng chạy số-----------
 
 // ------------phần chuyển sang index2.html--------------------
+  const audio = new Audio("bestnhac.mp3");
   const clickmail = document.querySelector('.icon')
     clickmail.addEventListener("click", function(){
+      audio.play();
       window.location.href="index2.html"
     })
 
     // ---------------hết phần chuyển index2.htnl----------------------
+
+
+  
